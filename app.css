@@ -14,6 +14,9 @@ nav {
   height: 30px;
   top: 20px;
 }
+.mini-logo{
+  display: none;
+}
 .shopify-logo:focus {
   outline-color: #005bd3;
 }
@@ -51,6 +54,7 @@ nav {
 .search-box:focus {
   outline-color: #005bd3;
 }
+
 .notification-icon {
   width: 32px;
   height: 30px;
@@ -60,7 +64,7 @@ nav {
   background-color: #303030;
   position: relative;
   top: 18px;
-  left: 120px;
+  left: 110px;
   cursor: pointer;
 }
 .notification-icon:active {
@@ -79,6 +83,7 @@ nav {
   border: 1px;
   background-color: #ffffff;
   box-shadow: 0px 4px 8px 0px #0000000d;
+  text-decoration: none;
 }
 
 .aleerts1 {
@@ -121,15 +126,17 @@ nav {
   text-align: left;
   color: #616161;
 }
-/*.davii{
-  width: 142px;
-height: 32px;
-}*/
+
 .notification-container {
   display: flex;
 }
 .notification-container a {
   text-decoration: none;
+}
+.union{
+  margin-left: 15px;
+  display: flex;
+  cursor: pointer;
 }
 .davii-collections {
   width: 142px;
@@ -137,26 +144,25 @@ height: 32px;
   font-family: Inter;
   font-size: 12px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
   color: #e3e3e3;
   background: #303030;
-  padding: 6px 2px 1px 8px;
+  padding: 12px 2px 1px 8px;
   border-radius: 8px;
   position: relative;
-  top: 8px;
+  top: 6px;
   right: 10px;
-  cursor: pointer;
 }
 .davii-collections:active {
   background-color: #656266;
 }
 
 .dc {
-  position: relative;
-  top: 5px;
-  left: 7px;
+  position:relative;
+  top: 22px;
+  left: -60px;
   margin-left: 8px;
   background: #36fba1;
   width: 28px;
@@ -165,10 +171,11 @@ height: 32px;
   font-family: Inter;
   font-size: 20px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 30px;
   letter-spacing: 0em;
   text-align: center;
   color: #00000066;
+padding: 4px;
 }
 .userdropdown-content {
   width: 320px;
@@ -219,18 +226,21 @@ ul {
   font-family: Inter;
   font-size: 11px;
   font-weight: 500;
-  line-height: 15px;
+  line-height: 25px;
   letter-spacing: 0em;
   text-align: center;
   color: #00000066;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   top: 9.63px;
   left: 6.13px;
   border-radius: 5.25px;
 }
 .dropdown-user p {
-  margin-right: 70px;
+  margin-right: 160px;
+}
+.davii-inside{
+  margin-right: 500px;
 }
 .all-stores {
   display: flex;
@@ -557,7 +567,7 @@ main button:active {
   outline-color: #005bd3;
 }
 .hidden {
-  display: none;
+  display: none; /* to make the up and down arrow toggle the menu*/
 }
 .customization,
 .first-product,
@@ -950,7 +960,170 @@ main button:active {
   background-color: #f3f3f3;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
+  
+    nav {
+     margin-left:-8px; 
+    width: 390px;
+    height: 56px;
+    justify-content: space-between;
+  }
+  .shopify-logo {
+   display: none;
+  }
+  .mini-logo{
+    display:block;
+  margin-top: 20px;
+  margin-left: 16px;
+  }
+  .search-container{
+   left: 15;
+    top: 21px;
+  }
+ .search-box{
+  width:238px;
+  height: 32px;
+}
+.notification-icon{
+  left:20px;
+  width: 20px;
+  height: 20px;
+  top:18px;
+  background-color: #1c181d;
+  width: 32px;
+  height: 30px;
+}
+.alerts{
+  width: 358px;
+  height: 136px;
+  left:10;
+}
+.alerts-store1{
+  width:326px;
+  text-align: center;
+}
+.alerts-store2{
+  color: #303030;
+  word-spacing: 2px;
+font-family: Inter;
+font-size: 13px;
+font-weight: 600;
+line-height: 18.2px;
+text-align: center;
+}
+.davii-collections {
+  display: none;
+}
+.dc {
+  position: relative;
+  top: 24px;
+  margin-left: 65px;
+  font-size: 12px;
+  font-family: Inter;
+  
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  color: #00000066;
+  padding: 0px;
+}
+.userdropdown-content{
+  left: 50;
+  width: 320px;
+}
+.dropdown-dc{
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+.trial{
+  display: block;
+  margin-left: -9px;
+  border-radius: 0px;
+  width: 390px;
+  height: 104px;
+}
+.trial p{
+  position: relative;
+  word-spacing: 2px;
+  bottom: 13px;
+}
+.trial button{
+  width: 90px;
+  height: 28px;
+  margin-top: 25px;
+}
+.cancel{
+  position: absolute;
+  top:155;
+  left: 380;
+}
+main{
+ margin-left: -9px;
+ width: 390px;
+ border-radius: 0px;
+}
+.personalized{
+  word-spacing: 1px;
+  margin-top: -2px;
+}
+.setup-arrow,
+.setdown-arrow {
+  margin-top: 12px;
+  margin-right: 20px;
+  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+}
+.image-1, .image-2, .image-3, .image-4, .image-5{
+  display: none;
+}
+.customization-container, .first-product-container, .custom-domain-container, .store-name-container, .payment-provider-container{
+  width: 374px;
   
 }
+.customization-container p{
+width: 326px;
+}
+.customization-container button{
+  margin-top:50px;
+}
+.first-product-container p{
+  width:326px;
+  font-size: 13px;
+}
+.first-product-container button {
+  margin-top: 50px;
+}
+.custom-domain-container{
+  height:159px;
+}
+.custom-domain-container p{
+  width: 326px;
+ 
+  font-size: 13px;
+}
+.custom-domain-container button{
+  margin-top: 60px;
+}
+.store-name-container{
+  height:159px;
+}
+.store-name-container p{
+  font-size: 13px;
+  width: 326px;
+}
+.store-name-container button{
+  margin-top: 80px;
+}
+.payment-provider-container{
+  height: 157px;
+}
+.payment-provider-container p{
+  width: 326px;
+ font-size: 13px;
+}
+.payment-provider-container button{
+  margin-top: 70px;
+}
+}
+
 

@@ -1,23 +1,26 @@
 // javascript for dropdown menu for the client notification
-function toggleDropdown() {
-    var dropdown = document.getElementById('user-content');
+function toggleDropdown(event) {
+  const clickedElement = event.target;
+  const parentElement = clickedElement.closest('.union'); // Find the closest parent with class "union"
+
+  if (parentElement) { // Clicked within the .union element (p or span)
+    const dropdown = document.getElementById('user-content'); // Assuming the dropdown ID remains the same
     dropdown.classList.toggle('show');
-  }
-  
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.davii-collections')) {
-      var dropdowns = document.getElementsByClassName('userdropdown-content');
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show') && !event.target.closest('.userdropdown-content')) {
-          openDropdown.classList.remove('show');
-        }
-      }
+  } else { // Clicked outside the .union element (close dropdown)
+    const openDropdown = document.querySelector('.userdropdown-content.show');
+    if (openDropdown && !openDropdown.contains(clickedElement)) {
+      openDropdown.classList.remove('show');
     }
   }
-  
+}
 
+// Event listener for clicks anywhere on the page
+window.onclick = toggleDropdown;
+
+
+  
+ 
+  
   
   
 
